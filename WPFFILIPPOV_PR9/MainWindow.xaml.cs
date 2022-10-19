@@ -25,11 +25,11 @@ namespace WPFFILIPPOV_PR9
             InitializeComponent();
         }
 
-        private void Schet_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string a = Convert.ToString(Dany.Content);
-            int index = a.IndexOf("OP");
-            Itog.Content = Convert.ToString(index);
+            ListBoxItem lbi = (ListBoxItem)(phoneList.ItemContainerGenerator.ContainerFromIndex(1));
+            TextBlock.Text = lbi.Content.ToString();
         }
     }
 }
+
